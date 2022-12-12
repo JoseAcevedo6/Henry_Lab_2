@@ -1,7 +1,5 @@
 from pandas import DataFrame, concat, read_csv, read_json
 
-from db import engine
-
 
 def cleansing(df, column):
 
@@ -163,7 +161,7 @@ df_serie = df_serie[['id_title', 'release_year', 'duration']]
 df_serie.sort_values(by=['duration', 'id_title'], ascending=False, inplace=True)
 df_serie.drop_duplicates(subset=['id_title'], keep='first', inplace=True)
 
-
+'''
 df_actor.to_sql('actor', engine, if_exists='append', index=False)
 df_listed_in.to_sql('listed_in', engine, if_exists='append', index=False)
 df_movie.to_sql('movie', engine, if_exists='append', index=False)
@@ -176,3 +174,4 @@ df_serie_title_listed_in.to_sql('serie_title_listed_in', engine, if_exists='appe
 df_serie_title_service.to_sql('serie_title_service', engine, if_exists='append', index=False)
 df_service.to_sql('service', engine, if_exists='append', index=False)
 df_title.to_sql('title', engine, if_exists='append', index=False)
+'''
