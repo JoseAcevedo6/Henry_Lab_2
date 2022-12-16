@@ -1,4 +1,3 @@
-.vscode/
-src/__pycache__/
+src/
 venv/
 JoseAcevedo6.csv
